@@ -1,0 +1,20 @@
+! ISP-RTR - MOCK LAB ONLY. Replace <WIN_HOST_IP> before pasting.
+! Lab-only placeholder passwords and keys; never reuse them.
+configure terminal
+hostname ISP-RTR
+no ip domain-lookup
+clock timezone AWST 8 0
+ntp master 3
+interface GigabitEthernet0/0
+ description to HQ-RTR
+ ip address 203.0.113.1 255.255.255.252
+ no shutdown
+interface GigabitEthernet0/1
+ description to BR1-RTR
+ ip address 203.0.113.5 255.255.255.252
+ no shutdown
+interface GigabitEthernet0/2
+ description to BR2-RTR
+ ip address 203.0.113.9 255.255.255.252
+ no shutdown
+end
