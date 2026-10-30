@@ -41,7 +41,7 @@ VPCS examples: `ip 10.10.10.10/24 10.10.10.1`, SRV-HQ `ip 10.10.50.10/24 10.10.5
 ## 3. Build order
 
 1. Find the Windows host IP that EVE-NG's Cloud0 reaches. In Windows, run `ipconfig`. If the EVE-NG VM uses VMware NAT, it's the "VMware Network Adapter VMnet8" address. If it uses bridged networking, it's your Wi-Fi/LAN address.
-2. In every file in `configs/`, replace `<WIN_HOST_IP>` with that address.
+2. In every file in `configs/`, replace `<WIN_HOST_IP>` with that address. Don't commit your real host IP back to the repo; keep the edited copies local or run `git update-index --skip-worktree configs/*.txt`.
 3. Start the nodes, open each console, and paste its config (ISP-RTR first, then the routers, then the switches). If a long paste drops lines, paste it in blocks.
 4. Run `write memory` on each device.
 5. Check the build:
